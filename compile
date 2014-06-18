@@ -1,0 +1,15 @@
+#!/bin/sh
+
+dir=`pwd`
+
+if [ ! -d "./final" ]; then
+    mkdir "final"
+    cd src
+    javac -d $dir/final Game.java
+    cd ..
+    cp -R $dir/resources $dir/final
+    cd final
+    touch easyHighScore.txt
+    touch mediumHighScore.txt
+    touch hardHighScore.txt
+fi

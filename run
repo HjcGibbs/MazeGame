@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if [ -d "./final" ]; then
+    cd final
+    java Game
+fi
